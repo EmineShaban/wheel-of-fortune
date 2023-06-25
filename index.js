@@ -1,5 +1,5 @@
 let container = document.querySelector(".container");
-let btn = document.getElementById("spin");
+let btn = document.getElementById("start");
 let number = Math.ceil(Math.random() * 1000);
 
 btn.onclick = function () {
