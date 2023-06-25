@@ -1,6 +1,7 @@
 let container = document.querySelector(".container");
 let btn = document.getElementById("start");
 let number = Math.ceil(Math.random() * 3000);
+//  number = Math.round(number / 360) * 360 + 180
 let freespins = document.getElementById("freespins");
 
 let countOfClick = 0
@@ -45,16 +46,29 @@ function onClick() {
     } else {
 
       number += Math.ceil(Math.random() * 1000)
+
+
+
       if ((number % 360) >= 165 && (number % 360) <= 195) {
+
         console.log('JFLXKDJLKFDLJKISDFLJKIFSDSJLKIDFFDKLJSDFJKLSDFLKJ')
+
         btn.disabled = true
+
         setTimeout(function () { btn.disabled = false; }, 15000);
-         for (let i = 0; i < 3; i++) {
-          container.style.transform = "rotate(" + number + "deg)";
-          number += Math.ceil(Math.random() * 1000)         
-          console.log('mmmmmmmmmmmmmmmmmmmmm') 
+
+        for (let i = 0; i < 3; i++) {
+          container.style.rotation.y += 0.01;
+          // setTimeout(function () {
+          //   container.style.transform = "rotate(" + number + "deg)";
+          //   number += Math.ceil(Math.random() * 1000)
+          // }, 5000);
+
+         
+          
+          console.log('mmmmmmmmmmmmmmmmmmmmm')
         }
-        
+
       } else if ((number % 360) > 75 && (number % 360) < 105) {
         number += Math.ceil(Math.random() * 60);
         container.style.transform = "rotate(" + number + "deg)";
