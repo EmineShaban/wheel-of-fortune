@@ -60,7 +60,7 @@ function onClick() {
 
 
 
-            if ((number % 360) >= 165 && (number % 360) <= 195) {
+            if ((number % 360) > 165 && (number % 360) < 195) {
 
                 console.log('JFLXKDJLKFDLJKISDFLJKIFSDSJLKIDFFDKLJSDFJKLSDFLKJ')
 
@@ -68,7 +68,7 @@ function onClick() {
     
                 setTimeout(function () { btn.disabled = false; }, 3000);
                 
-                number += Math.ceil(Math.random() * 1000)
+                // number += Math.ceil(Math.random() * 1000)
                 container.style.transform = "rotate(" + number + "deg)";
     
                 numSector = (number % 360)
@@ -116,8 +116,7 @@ function onClick() {
 
 
         console.log('ffffff')
-        console.log(Math.ceil(Math.random() * 10))
-
+ 
     } else {
         countOfClick = 0
         number += Math.ceil(Math.random() * 1000)
@@ -177,31 +176,35 @@ function onClick3() {
         console.log(sum)
 
         console.log('2')
-        onClickResult()
-
+        onClick4()
     }, 5000);
 }
 
+
+
+function onClick4() {
+    setTimeout( function(){
+        
+        number += Math.ceil(Math.random() * 1000)
+        container.style.transform = "rotate(" + number + "deg)";
+        //    container.style.transform ='none'
+        // alert('You win3')
+        
+        calcSum(numSector)
+        console.log(sum)
+        console.log('3')
+
+        onClickResult()
+
+    }, 5000 );
+    
+}
 function onClickResult(){
     setTimeout(function () {
 
     alert(`You win ${sum}$`)
     }, 5000);
 }
-
-
-//  function onClick4() {
-//     setTimeout( function(){
-
-//     number += Math.ceil(Math.random() * 1000)
-//    container.style.transform = "rotate(" + number + "deg)";
-// //    container.style.transform ='none'
-// alert('You win3')
-
-//    console.log('3')
-// }, 5000 );
-
-// }
 
 
 
