@@ -14,7 +14,7 @@ let number = Math.ceil(Math.random() * 3000);
 // let tenP = document.getElementById("tenP");
 // let elevenP = document.getElementById("elevenP");
 // let twelveP = document.getElementById("twelveP");
-
+let numSector
 let countOfClick = 0
 let sum = 0
 let rundomIndex = []
@@ -31,75 +31,16 @@ function onClick() {
     if (countOfClick < 10) {
 
         if (countOfClick == 2 || countOfClick == 5 || countOfClick == 9) {
-            console.log('JFLXKDJLKFDLJKISDFLJKIFSDSJLKIDFFDKLJSDFJKLSDFLKJ')
-
-            btn.disabled = true
-
-            setTimeout(function () { btn.disabled = false; }, 3000);
-
-                number += Math.ceil(Math.random() * 1000)
-                // let aa = number - (Math.round(number / 360) *360)
-                let numSector = (number % 360) 
-
-                console.log(numSector)
-
-                if(numSector>=345){
-sum += 500
-                }else if(numSector>=315){
-                    sum += 200
-
-                }else if(numSector>=285){
-                    sum += 400
-
-                }else if(numSector>=255){
-                    sum += 0
-
-                }else if(numSector>=225){
-                    sum += 500
-
-                }else if(numSector>=195){
-                    sum += 100
-
-                }else if(numSector>=165){
-                    sum += 0
-
-                }else if(numSector>=135){
-                    sum += 500
-
-                }else if(numSector>=105){
-                    sum += 300
-
-                }else if(numSector>=75){
-                    sum += 0
-
-                }else if(numSector>=45){
-                    sum += 400
-
-                } else if(numSector<=15){
-                    sum += 500
-                } 
+          
 
 
-                console.log(sum)
+            //рабочая тема
 
-
-
-
-                container.style.transform = "rotate(" + number + "deg)";
-               
-                // onClick2() 
- 
-                console.log('mmmmmmmmmmmmmmmmmmmmm')
-
-
-
-            // //рабочая тема
-
-            // let newRundomNum = Math.ceil(Math.random() * 1000)
-            // let newNum = number + newRundomNum
-            // //LOSE
-            // number = Math.round(newNum / 360) * 360 + 90
-            // container.style.transform = "rotate(" + number + "deg)";
+            let newRundomNum = Math.ceil(Math.random() * 1000)
+            let newNum = number + newRundomNum
+            //LOSE
+            number = Math.round(newNum / 360) * 360 + 90
+            container.style.transform = "rotate(" + number + "deg)";
 
 
 
@@ -124,20 +65,29 @@ sum += 500
                 console.log('JFLXKDJLKFDLJKISDFLJKIFSDSJLKIDFFDKLJSDFJKLSDFLKJ')
 
                 btn.disabled = true
-
-                setTimeout(function () { btn.disabled = false; }, 15000);
-
-                // for (let i = 0; i < 3; i++) {
-                //     container.style.rotation.y += 0.01;
-                //     // setTimeout(function () {
-                //     //   container.style.transform = "rotate(" + number + "deg)";
-                //     //   number += Math.ceil(Math.random() * 1000)
-                //     // }, 5000);
-
-
-
-                //     console.log('mmmmmmmmmmmmmmmmmmmmm')
-                // }
+    
+                setTimeout(function () { btn.disabled = false; }, 3000);
+                
+                number += Math.ceil(Math.random() * 1000)
+                container.style.transform = "rotate(" + number + "deg)";
+    
+                numSector = (number % 360)
+                calcSum(numSector)
+                console.log(numSector)
+    
+    
+    
+    
+                console.log(sum)
+    
+    
+    
+    
+                // alert('ddd')
+                onClick2()
+    
+                console.log('mmmmmmmmmmmmmmmmmmmmm')
+    
 
             } else if ((number % 360) > 75 && (number % 360) < 105) {
                 number += Math.ceil(Math.random() * 60);
@@ -191,38 +141,54 @@ sum += 500
 
 
 
- 
- 
+
+
 
 
 
 function onClick2() {
-    setTimeout( function(){
+    setTimeout(function () {
 
-    number += Math.ceil(Math.random() * 1000)
+        number += Math.ceil(Math.random() * 1000)
         container.style.transform = "rotate(" + number + "deg)";
-        // container.style.transform ="none"
 
-console.log('1')
+        numSector = (number % 360)
+
+        calcSum(numSector)
+        console.log(sum)
+
+        console.log('1')
         // alert('You win')
         onClick3()
-    }, 5000 );
+    }, 5000);
 
-    }
+}
 
 function onClick3() {
 
-    setTimeout( function(){
+    setTimeout(function () {
         console.log(1);
         number += Math.ceil(Math.random() * 1000)
-       container.style.transform = "rotate(" + number + "deg)";
-       // container.style.transform ='none'
+        container.style.transform = "rotate(" + number + "deg)";
+        // container.style.transform ='none'
+        numSector = (number % 360)
 
-    //    alert('You win2')
-       console.log('2')
+        calcSum(numSector)
+        console.log(sum)
 
-       }, 5000 );
- }
+        console.log('2')
+        onClickResult()
+
+    }, 5000);
+}
+
+function onClickResult(){
+    setTimeout(function () {
+
+    alert(`You win ${sum}$`)
+    }, 5000);
+}
+
 
 //  function onClick4() {
 //     setTimeout( function(){
@@ -236,3 +202,45 @@ function onClick3() {
 // }, 5000 );
 
 // }
+
+
+
+
+
+function calcSum(number) {
+    if (number >= 345) {
+        sum += 500
+    } else if (number >= 315) {
+        sum += 200
+
+    } else if (number >= 285) {
+        sum += 400
+
+    } else if (number >= 255) {
+        sum += 0
+
+    } else if (number >= 225) {
+        sum += 500
+
+    } else if (number >= 195) {
+        sum += 100
+
+    } else if (number >= 165) {
+        sum += 0
+
+    } else if (number >= 135) {
+        sum += 500
+
+    } else if (number >= 105) {
+        sum += 300
+
+    } else if (number >= 75) {
+        sum += 0
+
+    } else if (number >= 45) {
+        sum += 400
+
+    } else if (number <= 15) {
+        sum += 500
+    }
+}
