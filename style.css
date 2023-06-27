@@ -68,11 +68,11 @@ body{
     transform: rotate(120deg);
 }
 .container .six{
-    background-color: #506912;
+    background-color: #000;
     transform: rotate(150deg);
 }
 .container .seven{
-    background-color: #000; 
+    background-color: #506912;
     padding-bottom: 40px; 
     transform: rotate(180deg);
 }
