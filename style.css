@@ -116,7 +116,7 @@ div#arrow {
     z-index: 99999;
     position: absolute;
     left: 50%;
-    top: 24.5%;
+    top: 10%;
 
     transform: translate(-50%, -55%);
 }
@@ -147,29 +147,9 @@ p {
     transform: scale(-1);
 }
 
-@media screen and (min-width: 1800px) {
-    #arrow {
-       
-        top: 21.79%;
-    }
  
-}
-@media screen and (max-width: 1800px) {
-    #arrow {
-       
-        top: 21.79%;
-    }
- 
-}
-
-
-
-
 @media screen and (max-width: 512px) {
-    #arrow {
-       
-        top: 33.5%;
-    }
+   
     .container {
         width: 300px;
         height: 300px;
@@ -183,10 +163,4 @@ p {
     }
 }
 
-@media screen and (max-width: 375px) {
-
-#arrow {
-    top: 33.6%;
-}
-
-}
+ 
