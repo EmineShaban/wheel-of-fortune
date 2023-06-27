@@ -1,115 +1,110 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     background-color: #34495e;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    height:100vh;
-    overflow:hidden;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.container{
-    width:500px;
-    height:500px;
+.container {
+    width: 500px;
+    height: 500px;
     background-color: #ccc;
-    border-radius:50%;
-    border:15px solid  #fdcb4e
-    ;
+    border-radius: 50%;
+    border: 15px solid #fdcb4e;
     position: relative;
     overflow: hidden;
     transition: 5s;
 }
 
-.container div{
-    height:50%;
-    width:126px;
+.container div {
+    height: 50%;
+    width: 126px;
     position: absolute;
-    clip-path: polygon(100% 0 , 50% 100% , 0 0 );
-    transform:translateX(-50%);
-    transform-origin:bottom;
-    text-align:center;
-    display:flex;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
     writing-mode: vertical-rl;
-
     align-items: center;
     justify-content: center;
-    font-size:20px;
-    font-weight:bold;
-    font-family:sans-serif;
-    color:#fff;
-    padding-bottom: 40px; 
-
-    left:172px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    padding-bottom: 40px;
+    left: 172px;
 }
 
-.container .one{
+.container .one {
     background-color: #ec8191;
     transform: rotate(0deg);
 }
-.container .two{
+
+.container .two {
     background-color: #c29d8b;
     transform: rotate(30deg);
 }
-.container .three{
+
+.container .three {
     background-color: #e91e63;
-    transform:rotate(60deg);
+    transform: rotate(60deg);
 }
-.container .four{
+
+.container .four {
     background-color: #96094d;
     transform: rotate(90deg);
 }
-.container .five{
+
+.container .five {
     background-color: #ac7800;
     transform: rotate(120deg);
 }
-.container .six{
+
+.container .six {
     background-color: #000;
     transform: rotate(150deg);
 }
-.container .seven{
+
+.container .seven {
     background-color: #506912;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
     transform: rotate(180deg);
 }
-.container .eight{
-    background-color:#18689b ;
+
+.container .eight {
+    background-color: #18689b;
     transform: rotate(210deg);
 }
-.container .nine{
+
+.container .nine {
     background-color: #4aa5a5;
     transform: rotate(240deg);
 }
-.container .ten{
+
+.container .ten {
     background-color: #1f81c0;
     transform: rotate(270deg);
 }
-.container .eleven{
-    background-color:  #c56d7a;
+
+.container .eleven {
+    background-color: #c56d7a;
     transform: rotate(300deg);
 }
-.container .twelve{
+
+.container .twelve {
     background-color: #f436b1;
     transform: rotate(330deg);
 }
-
-/* .arrow{
-    position: absolute;
-    top:0;
-    left:50%;
-    transform: translateX(-50%);
-    color:#fff;
-} */
-
-/* .arrow::before{
-    content:"\1F817";
-    font-size:50px;
-} */
-
+ 
 #arrow {
     width: 0;
     height: 0;
@@ -122,31 +117,31 @@ body{
     position: absolute;
     left: 50%;
     top: 22.79%;
-    transform: translate(-50%,-55%);
+    transform: translate(-50%, -55%);
 }
 
-#start{
+#start {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    z-index:10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
     background-color: #FFD700;
     text-transform: uppercase;
-    border:8px solid #ddbd02;
-    font-weight:bold;
-    font-size:20px;
+    border: 8px solid #ddbd02;
+    font-weight: bold;
+    font-size: 20px;
     color: white;
     width: 100px;
-    height:100px;
+    height: 100px;
     font-family: sans-serif;
-    border-radius:50%;
+    border-radius: 50%;
     cursor: pointer;
-    outline:none;
+    outline: none;
     letter-spacing: 1px;
 }
 
-p{
+p {
     writing-mode: vertical-rl;
-  transform: scale(-1);
+    transform: scale(-1);
 }
