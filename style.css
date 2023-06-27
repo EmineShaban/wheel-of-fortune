@@ -105,7 +105,7 @@ body {
     transform: rotate(330deg);
 }
  
-#arrow {
+div#arrow {
     width: 0;
     height: 0;
     border: 0 solid transparent;
@@ -116,7 +116,8 @@ body {
     z-index: 99999;
     position: absolute;
     left: 50%;
-    top: 22.79%;
+    top: 24.5%;
+
     transform: translate(-50%, -55%);
 }
 
